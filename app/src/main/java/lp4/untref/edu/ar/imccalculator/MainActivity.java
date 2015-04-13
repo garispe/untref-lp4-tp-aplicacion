@@ -1,6 +1,8 @@
 package lp4.untref.edu.ar.imccalculator;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -75,4 +77,18 @@ public class MainActivity extends Activity {
         });
     }
 
+    public void PopUpInformacion(View v){
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage("El Índice de Masa Corporal (IMC) es una medida de asociación entre el peso y la talla de una persona. Se suele utilizar para evaluar nuestro estado nutricinal de acuerdo con los valores propuestos por la Organización Mundial de la Salud.")
+                .setTitle("Índice de Masa Corporal")
+                .setCancelable(false)
+                .setNeutralButton("Entendido",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                dialog.cancel();
+                            }
+                        });
+        AlertDialog alert = builder.create();
+        alert.show();
+    }
 }

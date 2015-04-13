@@ -6,7 +6,9 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+
+    android:background="#bdbbb1ff">
 
 
     <TextView
@@ -15,7 +17,7 @@
         android:layout_marginTop="20dp"
         android:layout_height="wrap_content"
         android:text="INDICE DE MASA CORPORAL"
-        android:textSize="30sp"
+        android:textSize="33dp"
         android:textStyle="bold"
         android:gravity="center" />
 
@@ -24,13 +26,14 @@
     <TextView
         android:id="@+id/masa"
         android:layout_width="match_parent"
-        android:layout_marginTop="30dp"
         android:layout_height="wrap_content"
-        android:layout_below="@id/textoIMC"
         android:text="PESO"
         android:textSize="22sp"
         android:textStyle="bold"
-        android:gravity="center" />
+        android:gravity="center"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <EditText
         android:id="@+id/campo_peso"
@@ -75,5 +78,21 @@
         android:textColor="@android:color/white"
         android:background="@android:color/black"
         android:text="CALCULAR IMC" />
+
+    <!-- INFORMACION -->
+
+    <Button
+        android:layout_width="@dimen/abc_action_bar_stacked_tab_max_width"
+        android:layout_height="wrap_content"
+        android:text="Qué es el IMC?"
+        android:id="@+id/botonInformacion"
+        android:layout_below="@+id/textoIMC"
+        android:layout_centerHorizontal="true"
+        android:onClick="PopUpInformacion"
+        android:layout_marginTop="43dp"
+        android:background="#ff7160ff"
+        android:textColor="#ffffffff"
+        android:textSize="23dp"
+        />
 
 </RelativeLayout>

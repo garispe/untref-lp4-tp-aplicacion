@@ -10,6 +10,7 @@ public class ResultadoActivity extends Activity {
     private TextView imc;
     private TextView indice;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,12 +19,16 @@ public class ResultadoActivity extends Activity {
         imc = (TextView) findViewById(R.id.textoResultado);
         indice = (TextView) findViewById(R.id.textoIndice);
 
+
         Bundle extras = getIntent().getExtras();
+
 
         String resultado = extras.get("Resultado").toString().substring(0,5);
         String indiceIMC = extras.get("Indice").toString();
 
+
         imc.setText(resultado);
         indice.setText(indiceIMC);
+
     }
 }
